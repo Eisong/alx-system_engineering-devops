@@ -1,0 +1,2 @@
+#!/bin/bash
+cown -hR vincent:staff .
