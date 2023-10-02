@@ -19,7 +19,7 @@ Requirements:
     If you decide to add a passphrase to your key, make sure to save this passphrase in a secure location, you will not be able to use your keys without the passphrase
 
 SSH and RSA keys will be covered in depth in a later project.
-1. For Best School loop
+1. For Best School loop 
 Write a Bash script that displays Best School 10 times.
 
 Requirement:
@@ -37,7 +37,7 @@ Write a Bash script that displays Best School 10 times.
 Requirements:
 
     You must use the until loop (for and while are forbidden)
-4. If 9, say Hi! 
+4. If 9, say Hi!
 Write a Bash script that displays Best School 10 times, but for the 9th iteration, displays Best School and then Hi on a new line.
 
 Requirements:
@@ -55,7 +55,8 @@ Requirements:
 
     You must use the while loop (for and until are forbidden)
     You must use the if, elif and else statements
-6. Superstitious numbers Write a Bash script that displays numbers from 1 to 20 and:
+6. Superstitious numbers 
+Write a Bash script that displays numbers from 1 to 20 and:
 
     displays 4 and then bad luck from China for the 4th loop iteration
     displays 9 and then bad luck from Japan for the 9th loop iteration
@@ -65,7 +66,7 @@ Requirements:
 
     You must use the while loop (for and until are forbidden)
     You must use the case statement
-7. Clock 
+7. Clock
 Write a Bash script that displays the time for 12 hours and 59 minutes:
 
     display hours from 0 to 12
@@ -76,6 +77,7 @@ Requirements:
     You must use the while loop (for and until are forbidden)
 
 Note that in this example, we only display the first 70 lines using the head command.
+
 8. For ls 
 Write a Bash script that displays:
 
@@ -87,7 +89,9 @@ Requirements:
 
     You must use the for loop (while and until are forbidden)
     Do not display hidden files
-9. To file, or not to file 
+
+9. To file, or not to file
+mandatory
 Write a Bash script that gives you information about the school file.
 
 Requirements:
@@ -125,7 +129,7 @@ Your script should only display:
 Requirements:
 
     You must use the while loop (for and until are forbidden)
-12. Tell the story of passwd
+12. Tell the story of passwd 
 Read:
 
     IFS (internal field separator)
@@ -140,7 +144,8 @@ Format: The user USERNAME is part of the GROUP_ID gang, lives in HOME_DIRECTORY 
 Requirements:
 
     You must use the while loop (for and until are forbidden)
-13. Let's parse Apache logs 
+
+13. Let's parse Apache logs
 Apache is among the most popular web servers in the world, serving 50% of all active websites, no doubt that you will have to interact with it within your career.
 
 As a Full-Stack Software Engineer, you have to master the art of parsing log files. Today we will do a simple parsing of Apache log access files.
