@@ -5,5 +5,5 @@ server_ip="342224-web-01"
 user="ubuntu"
 private_key="~/.ssh/school"
 
-# SSH connection using single-character flags
-ssh -i ~/.ssh/342224-web-01
+# SSH connection using single-character flag
+ssh -i "$private_key" "$user"@"$server_ip"
