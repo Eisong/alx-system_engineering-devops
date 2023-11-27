@@ -1,8 +1,9 @@
-#!/bin/bash
+# ~/.ssh/config
 
-# Set the server address
-server="10.251.0.2"
+Host your_server_hostname_or_ip
+  IdentityFile ~/.ssh/school
+  PasswordAuthentication no
 
 # Use the ssh command with single-character flags
-ssh -i ~/.ssh/school ubuntu@$server
+ssh -i ~/.ssh/school ubuntu@10.251.0.23
 
