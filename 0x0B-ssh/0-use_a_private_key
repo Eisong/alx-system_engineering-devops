@@ -1,8 +1,8 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Server infomation
 user="ubuntu"
 private_key="~/.ssh/school"
 
-# SSH connection using single-character flag
-ssh -i "$private_key" "$user"
+# SSH connection to connect to my school server
+ssh -i ~/.ssh/school ubuntu@10.251.0.2
