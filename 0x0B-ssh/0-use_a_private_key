@@ -1,7 +1,7 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Server infomation
-server_ip="342224-web-01"
+server_ip="54.122.341.23"
 user="ubuntu"
 private_key="~/.ssh/school"
 
