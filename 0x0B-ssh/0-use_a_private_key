@@ -1,4 +1,8 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-# SSH connection to connect to my school server
-ssh -i ~/.ssh/school ubuntu@342224-web-01
+# Set the server address
+server="342224-web-01"
+
+# Use the ssh command with single-character flags
+ssh -i ~/.ssh/school ubuntu@$server
+
