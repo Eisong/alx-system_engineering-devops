@@ -5,4 +5,4 @@ user="ubuntu"
 private_key="~/.ssh/school"
 
 # SSH connection using single-character flag
-ssh  ~/.ssh/10.251.0.2
+ssh -i ~/.ssh/10.251.0.2
