@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Set the key file name and passphrase
+key_file="school"
+key_bits=4096
+passphrase="betty"
+
+# Create RSA key pair with passphrase
+ssh-keygen -t rsa -b "$key_bits" -f "$key_file" -N "$passphrase"
+
+echo "RSA key pair created successfully:"
+echo "Private key: $key_file"
+echo "Public key: $key_file.pub"
