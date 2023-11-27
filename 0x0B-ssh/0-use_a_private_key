@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the server address
-server="342224-web-01"
+server="10.251.0.2"
 
 # Use the ssh command with single-character flags
 ssh -i ~/.ssh/school ubuntu@$server
