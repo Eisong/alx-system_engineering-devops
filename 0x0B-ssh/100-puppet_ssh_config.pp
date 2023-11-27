@@ -1,11 +1,16 @@
-# init.pp
+#!/usr/bin/env bash
+#using puppet to connect without password
 
-file { '/home/obuntu/.ssh/config':
-  ensure  => present,
-  owner   => 'obuntu',
-  group   => '~/.ssh/school',
-  mode    => '0600',
-  content => "Host your_server_hostname_or_ip\n
-              IdentityFile ~/.ssh/school\n
-              PasswordAuthentication no\n",
+file{'/etc/ssh/ssh_config':
+ ensure => present,
+}
+file_line{'Turn off passwd auth':
+ path => '/etc/ssh/ssh_config',
+ line => 'PasswordAuthencation no',
+ match => '^#PasswordAuthentication',
+}
+file_line{'Declare Identity filee':
+ path => '/etc/ssh/ssh_config',
+ line => 'IdentityFile ~/.ssh/school',
+ match => '^#IdentityFile',
 }
