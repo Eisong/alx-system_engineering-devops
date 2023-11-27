@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Server infomation
-server_ip="54.122.341.23"
+server_ip="342224-web-01"
 user="ubuntu"
 private_key="~/.ssh/school"
 
 # SSH connection using single-character flags
-ssh -i "$private_key" "$user"@"$server_ip"
+ssh -i ~/.ssh/342224-web-01
