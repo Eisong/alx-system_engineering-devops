@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Server infomation
 server_ip="54.122.341.23"
