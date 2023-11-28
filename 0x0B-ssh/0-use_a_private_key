@@ -1,3 +1,4 @@
+#!/usr/sbin/env bash
 # ~/.ssh/config
 
 Host your_server_hostname_or_ip
