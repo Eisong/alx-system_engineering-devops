@@ -1,10 +1,5 @@
-#!/usr/sbin/env bash
-# ~/.ssh/config
+#!/usr/bin/env bash
 
-Host your_server_hostname_or_ip
-  IdentityFile ~/.ssh/school
-  PasswordAuthentication no
-
-# Use the ssh command with single-character flags
-ssh -i ~/.ssh/school ubuntu@10.251.0.23
+#command with single-character flags
+ssh -i ~/.ssh/school ubuntu@10.251.0.2
 
