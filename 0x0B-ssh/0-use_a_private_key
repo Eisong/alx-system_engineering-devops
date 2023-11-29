@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 #command with single-character flags
-ssh -i ~/.ssh/school ubuntu@10.251.0.2
+ssh -i ~/.ssh/school ubuntu@141.192.213.10
 
