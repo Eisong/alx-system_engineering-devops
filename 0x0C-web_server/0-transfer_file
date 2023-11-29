@@ -8,7 +8,7 @@ fi
 
 
 # Transfer the file using scp
-scp -o StrictHostKeyChecking=no -i '~/.ssh/school' /path/to/ssh/some_page.html ubuntu 342224-web-01@10.251.02
+scp -o StrictHostKeyChecking=no -i ~/.ssh/ssh/some_page.html ubuntu@10.251.02
 
 # Check the exit status of the scp command
 if [ "$?" -eq 0 ]; then
