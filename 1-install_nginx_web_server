@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Update package list
+sudo apt update
+
+# Install Nginx
+sudo apt install -y nginx
+
+# Create a basic HTML page with the required content
+echo "<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to nginx!</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>" | sudo tee /var/www/html/index.html > /dev/null
+
+# Configure Nginx to use the custom HTML page
+sudo rm /etc/nginx/sites-available/default
+sudo rm /etc/nginx/sites-enabled/default
+
+echo "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html;
+
+    server_name _;
+
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+}" | sudo tee /etc/nginx/sites-available/default > /dev/null
+
+# Create a symbolic link to enable the new site configuration
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+
+# Restart Nginx without using systemctl
+sudo /etc/init.d/nginx restart
+
+# Display a message indicating the configuration is complete
+echo "Nginx has been installed and configured. The server is now listening on port 80."
