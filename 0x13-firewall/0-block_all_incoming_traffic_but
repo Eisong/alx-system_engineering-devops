@@ -1,0 +1,30 @@
+#!/bin/env bash
+
+#Install UFW (if not already installed):
+sudo apt-get update
+sudo apt-get install ufw
+
+#Set the default incoming policy to deny:
+sudo ufw default deny incoming
+
+#Allow SSH (Port 22), HTTP (Port 80), and HTTPS (Port 443):
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+
+#Enable UFW:
+sudo ufw enable
+
+#Verify the rules:
+sudo ufw status
+
+#The output should show that only SSH, HTTP, and HTTPS are allowed,
+#and the default policy for incoming is set to deny.
+sudo apt-get update
+sudo apt-get install ufw
+sudo ufw default deny incoming
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable
+sudo ufw status
