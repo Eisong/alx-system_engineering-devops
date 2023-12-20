@@ -1,0 +1,43 @@
+#!/bin/env bash
+
+# Open the UFW configuration file in a text editor (e.g., nano or vi):
+sudo nano /etc/ufw/before.rules
+
+# Add the following lines at the beginning of the file to configure the port forwarding:
+*nat
+:PREROUTING ACCEPT [0:0]
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+COMMIT
+
+# Reload UFW to apply the changes:
+sudo ufw reload
+
+# If your web server (Nginx) is only listening on port 80, and netstat 
+# shows that nothing is listening on port 8080, you need to make sure that
+# your Nginx server is configured to listen on port 8080.
+# Open the Nginx configuration file in a text editor. The main configuration
+# like /etc/nginx/sites-available/ or /etc/nginx/conf.d/. 
+# Choose the appropriate file based on your setup.
+sudo nano /etc/nginx/nginx.conf
+
+# file is often located at /etc/nginx/nginx.conf or in a directory
+server {
+    listen 80;
+    # other configuration settings...
+}
+
+# Add the following block to also make Nginx listen on port 8080:
+server {
+    listen 8080;
+    # other configuration settings...
+}
+
+# Restart Nginx to apply the changes:
+sudo service nginx restart
+
+# Also, on web-01, double-check the UFW rules to ensure that port 8080 is allowed:
+sudo ufw status
+
+# If port 8080 is not listed as allowed, add it:
+sudo ufw allow 8080/tcp
+sudo ufw reload
